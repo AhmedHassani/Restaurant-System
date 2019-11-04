@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="MAIN_PARINT" prefHeight="622.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bc_cashsir.Layout.AddItemViewController">
+    <stylesheets>
+        <URL value="@/bc_cashsir/Style/chseirview.css" />
+    </stylesheets>
+   <padding>
+      <Insets bottom="5.0" left="18.0" />
+   </padding>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="595.0" prefWidth="251.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Pane minHeight="-Infinity" prefHeight="50.0" prefWidth="251.0" styleClass="order_view" stylesheets="@../Style/chseirview.css" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #007e40;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" styleClass="title_of_set" stylesheets="@../Style/addItem.css" text="ألاصناف" textAlignment="CENTER" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <JFXListView fx:id="list_set" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#SeclectItem" prefHeight="226.0" prefWidth="261.0" styleClass="order_view" stylesheets="@../Style/chseirview.css" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXListView>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="260.0" styleClass="order_view" stylesheets="@../Style/chseirview.css">
+               <children>
+                  <JFXNodesList>
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="71.0">
+                           <children>
+                              <ImageView fx:id="del_but" fitHeight="30.0" fitWidth="35.0" layoutX="21.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" styleClass="order_view">
+                                 <image>
+                                    <Image url="@../Img/addview/minus1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Pane>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="260.0" styleClass="order_view" stylesheets="@../Style/chseirview.css" translateX="55.0" translateY="10.0">
+                           <children>
+                              <ComboBox fx:id="items_del_show" layoutX="55.0" layoutY="27.0" prefWidth="150.0" />
+                              <Button layoutX="68.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#DeleteSet" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: #ff3333;" styleClass="but" stylesheets="@../Style/addItem.css" text="حذف" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </JFXNodesList>
+                  <JFXNodesList>
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="59.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="41.0" layoutX="15.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="order_view">
+                                 <image>
+                                    <Image url="@../Img/addview/edit.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Pane>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="260.0" styleClass="order_view" translateX="-15.0" translateY="15.0">
+                           <children>
+                              <JFXButton fx:id="save_groub" buttonType="RAISED" layoutX="132.0" layoutY="204.0" prefHeight="32.0" prefWidth="113.0" ripplerFill="#08e431" style="-fx-background-color: #007e40;" styleClass="but" stylesheets="@../Style/addItem.css" text="حفظ" />
+                              <JFXTextField alignment="CENTER_RIGHT" focusColor="#11bf3a" layoutX="46.0" layoutY="30.0" prefHeight="26.0" prefWidth="190.0" promptText="اسم الصنف او المجموعة " unFocusColor="#16ee2c" />
+                              <JFXTextField alignment="CENTER_RIGHT" focusColor="#0bdd12" layoutX="46.0" layoutY="99.0" prefColumnCount="5" prefHeight="26.0" prefWidth="190.0" promptText="مسار الصورة" unFocusColor="#18da0a" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </JFXNodesList>
+                  <JFXNodesList>
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onMouseClicked="#AddSet" prefHeight="38.0" prefWidth="53.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" styleClass="order_view">
+                                 <image>
+                                    <Image url="@../Img/addview/add.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Pane>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="260.0" styleClass="order_view" translateX="-68.0" translateY="15.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" layoutX="132.0" layoutY="204.0" onMouseClicked="#SaveGroub" prefHeight="32.0" prefWidth="113.0" ripplerFill="#08e431" style="-fx-background-color: #007e40;" styleClass="but" stylesheets="@../Style/addItem.css" text="حفظ" />
+                              <JFXTextField fx:id="name_of_groub" alignment="CENTER_RIGHT" focusColor="#11bf3a" layoutX="46.0" layoutY="30.0" prefHeight="26.0" prefWidth="190.0" promptText="اسم الصنف او المجموعة " unFocusColor="#16ee2c" />
+                              <JFXTextField fx:id="path_groub" alignment="CENTER_RIGHT" focusColor="#0bdd12" layoutX="46.0" layoutY="99.0" onMouseClicked="#getPath" prefColumnCount="5" prefHeight="26.0" prefWidth="190.0" promptText="مسار الصورة" unFocusColor="#18da0a" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </JFXNodesList>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets bottom="10.0" />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="336.0" layoutY="7.0" prefHeight="597.0" prefWidth="639.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="336.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="50.0" prefWidth="629.0" style="-fx-background-color: #007e40;" styleClass="order_view" stylesheets="@../Style/chseirview.css" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <children>
+                  <ComboBox fx:id="select_mat" onMouseClicked="#Up_Data" prefHeight="28.0" prefWidth="177.0" promptText="الكل">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <TextField alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="247.0" style="-fx-background-color: #fff;" stylesheets="@../Style/romve_border.css">
+                     <styleClass>
+                        <String fx:value="non_border" />
+                        <String fx:value="readus" />
+                     </styleClass></TextField>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #fff;" styleClass="rb" stylesheets="@../Style/romve_border.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Img/addview/search.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Pane>
+               </children></HBox>
+            <TableView fx:id="tabel_view_mat" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#FullData" prefHeight="347.0" prefWidth="621.0" styleClass="order_view" VBox.vgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="id" editable="false" minWidth="0.0" prefWidth="155.25" sortType="DESCENDING" sortable="false" text="#" />
+                  <TableColumn fx:id="name" editable="false" minWidth="0.0" prefWidth="155.25" sortable="false" text="اسم المادة " />
+                <TableColumn fx:id="price" editable="false" prefWidth="155.25" sortable="false" text="السعر " />
+                <TableColumn fx:id="type_or_set" editable="false" prefWidth="155.25" sortable="false" text="الصنف او المجموعة " />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <stylesheets>
+                  <URL value="@../Style/chseirview.css" />
+                  <URL value="@../Style/table_mat.css" />
+               </stylesheets>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="188.0" prefWidth="621.0" styleClass="order_view" stylesheets="@../Style/chseirview.css">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="217.0">
+                           <children>
+                              <ComboBox fx:id="e_type" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="151.0">
+                                 <stylesheets>
+                                    <URL value="@../Style/romve_border.css" />
+                                    <URL value="@../Style/chseirview.css" />
+                                 </stylesheets>
+                                 <styleClass>
+                                    <String fx:value="readus" />
+                                    <String fx:value="order_view" />
+                                 </styleClass></ComboBox>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="62.0" style="-fx-background-color: #007e40;" styleClass="rb" stylesheets="@../Style/romve_border.css">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="9.0" prefHeight="18.0" prefWidth="46.0" styleClass="but" stylesheets="@../Style/addItem.css" text="الصنف" />
+                                 </children>
+                              </Pane>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="223.0">
+                           <children>
+                              <TextField fx:id="e_price" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="151.0" style="-fx-background-color: #fff;">
+                                 <styleClass>
+                                    <String fx:value="readus" />
+                                    <String fx:value="non_border" />
+                                    <String fx:value="order_view" />
+                                 </styleClass>
+                                 <stylesheets>
+                                    <URL value="@../Style/romve_border.css" />
+                                    <URL value="@../Style/chseirview.css" />
+                                 </stylesheets></TextField>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="62.0" style="-fx-background-color: #007e40;">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="11.0" prefHeight="18.0" prefWidth="46.0" styleClass="but" stylesheets="@../Style/addItem.css" text="السعر" />
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@../Style/romve_border.css" />
+                                    <URL value="@../Style/chseirview.css" />
+                                 </stylesheets>
+                                 <styleClass>
+                                    <String fx:value="rb" />
+                                    <String fx:value="order_view" />
+                                 </styleClass>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="188.0" prefWidth="223.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="223.0">
+                           <children>
+                              <TextField fx:id="e_id" alignment="CENTER_RIGHT" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="151.0" style="-fx-background-color: #fff;">
+                                 <styleClass>
+                                    <String fx:value="non_border" />
+                                    <String fx:value="readus" />
+                                    <String fx:value="order_view" />
+                                 </styleClass>
+                                 <stylesheets>
+                                    <URL value="@../Style/romve_border.css" />
+                                    <URL value="@../Style/chseirview.css" />
+                                 </stylesheets></TextField>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="62.0" style="-fx-background-color: #007e40;">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="11.0" prefHeight="18.0" prefWidth="46.0" styleClass="but" stylesheets="@../Style/addItem.css" text="الرقم" />
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@../Style/romve_border.css" />
+                                    <URL value="@../Style/chseirview.css" />
+                                 </stylesheets>
+                                 <styleClass>
+                                    <String fx:value="rb" />
+                                    <String fx:value="order_view" />
+                                 </styleClass>
+                              </Pane>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="223.0">
+                           <children>
+                              <TextField fx:id="e_name" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="151.0" style="-fx-background-color: #fff;">
+                                 <styleClass>
+                                    <String fx:value="readus" />
+                                    <String fx:value="non_border" />
+                                    <String fx:value="order_view" />
+                                 </styleClass>
+                                 <stylesheets>
+                                    <URL value="@../Style/romve_border.css" />
+                                    <URL value="@../Style/chseirview.css" />
+                                 </stylesheets></TextField>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="62.0" style="-fx-background-color: #007e40;">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="11.0" prefHeight="18.0" prefWidth="46.0" styleClass="but" stylesheets="@../Style/addItem.css" text="الاسم" />
+                                 </children>
+                                 <stylesheets>
+                                    <URL value="@../Style/romve_border.css" />
+                                    <URL value="@../Style/chseirview.css" />
+                                 </stylesheets>
+                                 <styleClass>
+                                    <String fx:value="rb" />
+                                    <String fx:value="order_view" />
+                                 </styleClass>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="188.0" prefWidth="152.0">
+                     <children>
+                        <JFXButton onMouseClicked="#AddMatValues" prefHeight="32.0" prefWidth="164.0" style="-fx-background-color: #007e40;" styleClass="but" stylesheets="@../Style/addItem.css" text="اظافة">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#UpData" prefHeight="32.0" prefWidth="157.0" style="-fx-background-color: #007e40;" styleClass="but" stylesheets="@../Style/addItem.css" text="تعديل ">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#DeleteRowMat" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #007e40;" styleClass="but" stylesheets="@../Style/addItem.css" text="حذف ">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#clear" prefHeight="32.0" prefWidth="169.0" style="-fx-background-color: #007e40;" styleClass="but" stylesheets="@../Style/addItem.css" text="مسح المحتوى">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

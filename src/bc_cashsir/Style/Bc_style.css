@@ -1,0 +1,26 @@
+.bar_mnue{
+    -fx-background-color:#008443;
+   
+}
+.icon_close{
+    -fx-float: right;
+}
+.mune_item{
+    -fx-background-color:#444552;
+   
+}
+
+.icon_mune_left{
+    
+}
+.icon_mune_left:hover{
+    -fx-opacity:0.50;
+   
+}
+.item_mnue_in_nav{
+    
+}
+.item_mnue_in_nav:hover{
+    -fx-background-color:#008443;
+}
+

@@ -1,0 +1,39 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.order_view{
+    -fx-background-color:#ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0.8,0.8), 15, 0,0, 0);
+}
+.next_back{
+
+
+}
+.next_back:hover{
+    -fx-backrtound-color:#008443;
+}
+.silder_mnue_number{
+    -fx-border-color:#008443;
+    -fx-border-width: 1,1,0,1;
+    -fx-border-style: solid;
+
+}
+.grad{
+
+
+}
+.delete_save{
+
+
+}
+.delete_save:hover{
+    -fx-opacity:0.7;
+        
+}
+
+/*-fx-background-color: linear-gradient(to bottom right,
+derive(goldenrod, 20%), derive(goldenrod, -40%));*/

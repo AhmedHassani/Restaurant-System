@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.size_f_cart_title{
+    -fx-font-size:18px;
+}
+.size_f_cart_number{
+    -fx-font-size:30px;
+}

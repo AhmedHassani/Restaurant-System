@@ -1,0 +1,51 @@
+.background {
+    -fx-background-color: #ffffff;
+}
+.table-row{
+    line-height: 200px;
+}
+.label {
+    -fx-font-size: 11;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+.label-bright {
+    -fx-font-size: 11;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 14;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-base: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-background-color:#ffffff ;
+    -fx-padding: 5;
+}
+
+
+
+.table-view .column-header, .table-view .filler {
+  -fx-color:#008443;
+
+}
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}

@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.bar{
+    -fx-background-color:#008443;
+}
+.effect{
+    -fx-background-color:#ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0.8,0.8), 15, 0,0, 0);
+}
